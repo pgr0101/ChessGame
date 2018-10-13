@@ -16,6 +16,7 @@ public class ChessGame {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        System.out.println("try if it works");
     }
     
 }
