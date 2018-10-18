@@ -1,4 +1,3 @@
-
 package chessgame;
 
 /**
@@ -7,12 +6,14 @@ package chessgame;
  */
 public class ChessGame {
 
+    protected static Board board;
+
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        System.out.println("I tried it :) ");
+        board = new Board();
     }
-    
+
 }

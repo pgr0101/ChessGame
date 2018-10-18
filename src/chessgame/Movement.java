@@ -14,6 +14,9 @@ public class Movement {
      * movable : the piece that is moving
      * home : the first place
      * dest : destination of the piece
+     * @param movable
+     * @param home
+     * @param dest
      */
     public Movement(Piece movable, Place home, Place dest) {
         // checking and throwing new exceptions if the place is empty        
@@ -25,6 +28,10 @@ public class Movement {
     /**
      * if we have a piece in the destination place 
      * and we have to delete it
+     * @param movable
+     * @param home
+     * @param dest
+     * @param deleted
      */
     public Movement(Piece movable, Place home, Place dest , Piece deleted) {
         this.movable = movable;
@@ -35,18 +42,21 @@ public class Movement {
 
     /**
      * get the piece that moved
+     * @return 
      */
     public Piece getMovable() {
         return this.movable;
     }
     /**
      * get the first place
+     * @return 
      */
     public Place getHome() {
         return this.home;
     }
     /**
      * get the destination
+     * @return 
      */
     public Place getDest(){
         return this.dest;
@@ -55,6 +65,7 @@ public class Movement {
     /**
      * get the deleted piece if it exists\
      * if it returns null it means that nothing has been deleted
+     * @return 
      */
     public Piece getDeleted(){
         return this.deleted;
