@@ -27,7 +27,7 @@ public class Pawn extends Piece {
                 if (ChessGame.board.places[i + 1][j].getPiece() == null) {
                     place.add(ChessGame.board.places[i + 1][j]);
                 }
-                if (i == 1) {
+                if (i == 1 && ChessGame.board.places[i + 1][j].getPiece() == null) {
                     if (ChessGame.board.places[i + 2][j].getPiece() == null) {
                         place.add(ChessGame.board.places[i + 2][j]);
                     }
@@ -40,7 +40,7 @@ public class Pawn extends Piece {
                 if (ChessGame.board.places[i - 1][j].getPiece() == null) {
                     place.add(ChessGame.board.places[i - 1][j]);
                 }
-                if (i == 6) {
+                if (i == 6 && ChessGame.board.places[i - 1][j].getPiece() == null) {
                     if (ChessGame.board.places[i - 2][j].getPiece() == null) {
                         place.add(ChessGame.board.places[i - 2][j]);
                     }
