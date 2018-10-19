@@ -56,7 +56,7 @@ public class Bishop extends Piece {
         int j = location.getColumn();
         int k = 1;
         while ((i + k) != 8 && (j + k) != 8) {
-            if (ChessGame.board.places[i + k][j + k].getPiece() != null) {
+            if (ChessGame.board.places[i + k][j + k].getPiece() != null && ChessGame.board.places[i + k][j + k].getPiece().color != color) {
                 place.add(ChessGame.board.places[i + k][j + k]);
                 break;
             }
@@ -64,7 +64,7 @@ public class Bishop extends Piece {
         }
         k = 1;
         while ((i - k) != -1 && (j - k) != -1) {
-            if (ChessGame.board.places[i - k][j - k].getPiece() != null) {
+            if (ChessGame.board.places[i - k][j - k].getPiece() != null && ChessGame.board.places[i - k][j - k].getPiece().color != color) {
                 place.add(ChessGame.board.places[i - k][j - k]);
                 break;
             }
@@ -72,7 +72,7 @@ public class Bishop extends Piece {
         }
         k = 1;
         while ((i + k) != 8 && (j - k) != -1) {
-            if (ChessGame.board.places[i + k][j - k].getPiece() != null) {
+            if (ChessGame.board.places[i + k][j - k].getPiece() != null && ChessGame.board.places[i + k][j - k].getPiece().color != color) {
                 place.add(ChessGame.board.places[i + k][j - k]);
                 break;
             }
@@ -80,7 +80,7 @@ public class Bishop extends Piece {
         }
         k = 1;
         while ((i - k) != -1 && (j + k) != 8) {
-            if (ChessGame.board.places[i - k][j + k].getPiece() != null) {
+            if (ChessGame.board.places[i - k][j + k].getPiece() != null && ChessGame.board.places[i - k][j + k].getPiece().color != color) {
                 place.add(ChessGame.board.places[i - k][j + k]);
                 break;
             }
