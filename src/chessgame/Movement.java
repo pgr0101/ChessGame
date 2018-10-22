@@ -23,7 +23,6 @@ public class Movement {
         this.movable = movable;
         this.home = home;
         this.dest = dest;
-        this.deleted = deleted;
     }
     /**
      * if we have a piece in the destination place 
