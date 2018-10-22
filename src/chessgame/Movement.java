@@ -69,4 +69,18 @@ public class Movement {
     public Piece getDeleted(){
         return this.deleted;
     }
+    
+    public void unDo(){
+        if(deleted != null){
+            this.deleted.setStat(true);
+            this.movable.setPlace(home);
+            this.deleted.setPlace(dest);
+            this.home.setPiece(this.movable);
+            this.dest.setPiece(this.deleted);
+        }else {
+            this.movable.setPlace(home);
+            this.home.setPiece(this.movable);
+            this.dest.setPiece(null);
+        }
+    }
 }

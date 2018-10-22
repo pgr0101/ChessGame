@@ -53,7 +53,9 @@ public class Board {
         // return true or false
     }
 
-    // mamad ye method bara shah bezar ke mat boodan va kish boodan ro barash checl kone
-    // boolean bashe az hame jahat ha bayad check beshe
     
+    public void Back(){
+        Movement m = movements.pop();
+        m.unDo();
+    }
 }

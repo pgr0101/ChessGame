@@ -103,4 +103,11 @@ public abstract class Piece {
         return this.location;
     }
 
+    public void setPlace(Place location){
+        this.location = location;
+    }
+    
+    public void setStat(boolean stat){
+        this.status = stat;
+    }
 }
