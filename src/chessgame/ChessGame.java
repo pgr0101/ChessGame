@@ -13,7 +13,8 @@ public class ChessGame {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        board = new Board();
+        String ownerName_black = null, ownerName_white = null;
+        board = new Board(ownerName_black, ownerName_white);
     }
 
 }
