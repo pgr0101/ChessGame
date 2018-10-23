@@ -1,21 +1,14 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1">
-        <file>
-            <url>src/chessgame/ChessGame.java</url>
-            <bookmark id="1">
-                <name/>
-                <line>0</line>
-                <key/>
-            </bookmark>
-        </file>
-    </editor-bookmarks>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/F:/Data%20structure/project%2001/ChessGame/src/chessgame/Knight.java</file>
             <file>file:/F:/Data%20structure/project%2001/ChessGame/src/chessgame/Piece.java</file>
             <file>file:/F:/Data%20structure/project%2001/ChessGame/src/chessgame/Pawn.java</file>
+            <file>file:/F:/Data%20structure/project%2001/ChessGame/src/chessgame/Board.java</file>
             <file>file:/F:/Data%20structure/project%2001/ChessGame/src/chessgame/Bishop.java</file>
+            <file>file:/F:/Data%20structure/project%2001/ChessGame/src/chessgame/Queen.java</file>
             <file>file:/F:/Data%20structure/project%2001/ChessGame/src/chessgame/ChessGame.java</file>
             <file>file:/F:/Data%20structure/project%2001/ChessGame/src/chessgame/Place.java</file>
             <file>file:/F:/Data%20structure/project%2001/ChessGame/src/chessgame/Rook.java</file>
@@ -24,12 +17,3 @@
         </group>
     </open-files>
 </project-private>
-=======
-<?xml version="1.0" encoding="UTF-8"?>
-<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
-    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
-    </open-files>
-</project-private>
->>>>>>> d910e505e38e8b3fd866b5f97869a57c0db29807
