@@ -23,7 +23,6 @@ public class Movement {
         this.movable = movable;
         this.home = home;
         this.dest = dest;
-        this.deleted = deleted;
     }
     /**
      * if we have a piece in the destination place 
@@ -69,5 +68,19 @@ public class Movement {
      */
     public Piece getDeleted(){
         return this.deleted;
+    }
+    
+    public void unDo(){
+        if(deleted != null){
+            this.deleted.setStat(true);
+            this.movable.setPlace(home);
+            this.deleted.setPlace(dest);
+            this.home.setPiece(this.movable);
+            this.dest.setPiece(this.deleted);
+        }else {
+            this.movable.setPlace(home);
+            this.home.setPiece(this.movable);
+            this.dest.setPiece(null);
+        }
     }
 }

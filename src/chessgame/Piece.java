@@ -90,5 +90,24 @@ public abstract class Piece {
      * @return
      */
     protected abstract ArrayList getPossibleDelete();
+    
+    public int getColor(){
+        return this.color;
+    }
+    
+    public String getOwnerName(){
+        return this.ownerName;
+    }
+    
+    public Place getLocation(){
+        return this.location;
+    }
 
+    public void setPlace(Place location){
+        this.location = location;
+    }
+    
+    public void setStat(boolean stat){
+        this.status = stat;
+    }
 }
