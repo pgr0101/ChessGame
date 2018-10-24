@@ -13,8 +13,9 @@ import java.util.ArrayList;
  */
 public class King extends Piece {
 
-    public King(String ownerName, int color, Place location) {
-        super(ownerName, color, location);
+    public King(Player owner, int color, Place location , String ID , String name) {
+        super(owner, color, location , ID , name);
+        this.setDeletable(false);
     }
 
     @Override
@@ -88,5 +89,17 @@ public class King extends Piece {
             return place;
         }
     }
-
+     /**
+      * if it fails the game return true
+      */
+    public boolean isFailed(){
+        
+        if(condition){
+            
+            
+            return true;
+        }
+        
+        return false;
+    }
 }

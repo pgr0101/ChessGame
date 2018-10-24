@@ -13,23 +13,29 @@ import java.util.ArrayList;
  */
 public abstract class Piece {
 
-    protected String ownerName;
     protected int color;//white=0 and black=1
     protected Place location;
     protected boolean status;
+    private boolean deleteable = true;
+    private String ID;
+    private Player owner;
+    private String name;
 
     /**
      * constructor
      *
-     * @param ownerName
+     * @param owner
      * @param color
      * @param location
+     * @param name
      */
-    public Piece(String ownerName, int color, Place location) {
-        this.ownerName = ownerName;
+    public Piece(Player owner, int color, Place location , String ID , String name) {
+        this.owner = owner;
         this.color = color;
         this.location = location;
         status = true;
+        this.ID = ID;
+        this.name = name;
     }
 
     /**
@@ -95,19 +101,51 @@ public abstract class Piece {
         return this.color;
     }
     
-    public String getOwnerName(){
-        return this.ownerName;
-    }
+    
     
     public Place getLocation(){
         return this.location;
     }
 
-    public void setPlace(Place location){
+    public void setLocation(Place location){
         this.location = location;
     }
     
     public void setStat(boolean stat){
         this.status = stat;
+    }
+    
+    /**
+     * king should not be deletable   
+     */ 
+    public boolean isDeletable(){
+        return this.deleteable;
+    }
+    
+    public void setDeletable(boolean deletable){
+        this.deleteable = deletable;
+    }
+    /**
+     * returns a string as id 01 to 016
+     * first char is color and after that is the piece number
+     */
+    public String getID(){
+        return this.ID;
+    }
+    
+    public Player getPlayer(){
+        return this.owner;
+    }
+    
+    
+    public String getKind(){
+        return ""+this.getClass();
+    }
+
+    /**
+     * it returns the kind of the piece for when we try to change it with a pawn
+     */
+    public String getName(){
+        return this.name;
     }
 }

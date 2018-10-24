@@ -73,12 +73,12 @@ public class Movement {
     public void unDo(){
         if(deleted != null){
             this.deleted.setStat(true);
-            this.movable.setPlace(home);
-            this.deleted.setPlace(dest);
+            this.movable.setLocation(home);
+            this.deleted.setLocation(dest);
             this.home.setPiece(this.movable);
             this.dest.setPiece(this.deleted);
         }else {
-            this.movable.setPlace(home);
+            this.movable.setLocation(home);
             this.home.setPiece(this.movable);
             this.dest.setPiece(null);
         }

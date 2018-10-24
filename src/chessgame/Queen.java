@@ -13,8 +13,8 @@ import java.util.ArrayList;
  */
 public class Queen extends Piece {
 
-    public Queen(String ownerName, int color, Place location) {
-        super(ownerName, color, location);
+    public Queen(Player owner, int color, Place location, String ID, String name) {
+        super(owner, color, location, ID , name);
     }
 
     @Override

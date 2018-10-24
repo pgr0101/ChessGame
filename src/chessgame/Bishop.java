@@ -13,8 +13,8 @@ import java.util.ArrayList;
  */
 public class Bishop extends Piece {
 
-    public Bishop(String ownerName, int color, Place location) {
-        super(ownerName, color, location);
+    public Bishop(Player owner, int color, Place location , String ID , String name) {
+        super(owner, color, location , ID , name);
     }
 
     @Override

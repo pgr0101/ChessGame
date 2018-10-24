@@ -13,8 +13,8 @@ import java.util.ArrayList;
  */
 public class Rook extends Piece {
 
-    public Rook(String ownerName, int color, Place location) {
-        super(ownerName, color, location);
+    public Rook(Player owner, int color, Place location , String ID , String name) {
+        super(owner, color, location , ID ,name);
     }
 
     @Override
