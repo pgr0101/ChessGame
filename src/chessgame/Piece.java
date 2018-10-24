@@ -38,48 +38,6 @@ public abstract class Piece {
         this.name = name;
     }
 
-    /**
-     * This method move each pieces according to type of piece if moving have
-     * done,return true and in otherwise return false
-     *
-     * @param des
-     * @return
-     */
-    protected boolean move(Place des) {
-        ArrayList<Place> place = getPossibleMove();
-        for (int i = 0; i < place.size(); i++) {
-            if (des == place.get(i)) {
-                ChessGame.board.storeMovement(new Movement(this, location, des));
-                location.setPiece(null);
-                location = des;
-                des.setPiece(this);
-                return true;
-            }
-        }
-        return false;
-    }
-
-    /**
-     * This method delete other pieces which this piece can remove them from the
-     * board if deleting have done,return true and in otherwise return false
-     *
-     * @param des
-     * @return
-     */
-    protected boolean deletePiece(Place des) {
-        ArrayList<Place> place = getPossibleDelete();
-        for (int i = 0; i < place.size(); i++) {
-            if (des == place.get(i)) {
-                ChessGame.board.storeMovement(new Movement(this, location, des, des.getPiece()));
-                location.setPiece(null);
-                location = des;
-                des.getPiece().status = false;
-                des.setPiece(this);
-                return true;
-            }
-        }
-        return false;
-    }
 
     /**
      * this method return homes which this piece can be put on them as an
@@ -149,3 +107,45 @@ public abstract class Piece {
         return this.name;
     }
 }
+
+    /*
+      This method move each pieces according to type of piece if moving have
+      done,return true and in otherwise return false
+     
+    protected boolean move(Place des) {
+        ArrayList<Place> place = getPossibleMove();
+        for (int i = 0; i < place.size(); i++) {
+            if (des == place.get(i)) {
+                ChessGame.board.storeMovement(new Movement(this, location, des));
+                location.setPiece(null);
+                location = des;
+                des.setPiece(this);
+                return true;
+            }
+        }
+        return false;
+    }
+    */
+    
+    /*
+     * This method delete other pieces which this piece can remove them from the
+     * board if deleting have done,return true and in otherwise return false
+     *
+     * @param des
+     * @return
+     
+    protected boolean deletePiece(Place des) {
+        ArrayList<Place> place = getPossibleDelete();
+        for (int i = 0; i < place.size(); i++) {
+            if (des == place.get(i)) {
+                ChessGame.board.storeMovement(new Movement(this, location, des, des.getPiece()));
+                location.setPiece(null);
+                location = des;
+                des.getPiece().status = false;
+                des.setPiece(this);
+                return true;
+            }
+        }
+        return false;
+    }
+    */

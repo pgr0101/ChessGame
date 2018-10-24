@@ -10,6 +10,9 @@ public class Movement {
     private Place dest;
     private Piece movable;
     private Piece deleted;
+    private Piece newpiece;
+    private Piece pawn;
+    private Place changeplace;
     /**
      * movable : the piece that is moving
      * home : the first place
@@ -37,8 +40,16 @@ public class Movement {
         this.home = home;
         this.dest = dest;
         this.deleted = deleted;
+        deleted.getPlayer().addDeleted(deleted);
     }
-
+    /**
+     * if we change pawn to another piece
+     */
+    public Movement(Piece Pawn , Piece newpiece){
+        this.pawn = pawn;
+        this.newpiece = newpiece;
+    }
+    
     /**
      * get the piece that moved
      * @return 
@@ -72,15 +83,23 @@ public class Movement {
     
     public void unDo(){
         if(deleted != null){
-            this.deleted.setStat(true);
             this.movable.setLocation(home);
             this.deleted.setLocation(dest);
             this.home.setPiece(this.movable);
             this.dest.setPiece(this.deleted);
-        }else {
+            this.deleted.getPlayer().addPiece(deleted);
+        }else if(movable != null){
             this.movable.setLocation(home);
             this.home.setPiece(this.movable);
             this.dest.setPiece(null);
+        }else if(pawn != null){
+            this.pawn.setStat(true);
+            this.newpiece.setStat(false);
+            this.newpiece.getLocation().setPiece(pawn);
+            this.pawn.setLocation(this.newpiece.getLocation());
+            this.newpiece.setLocation(null);
+            this.pawn.getPlayer().addPiece(this.pawn);
+            this.pawn.getPlayer().addDeleted(this.newpiece);
         }
     }
 }
