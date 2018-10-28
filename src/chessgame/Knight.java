@@ -22,10 +22,9 @@ public class Knight extends Piece{
         ArrayList<Place> answer = new ArrayList<Place>();
         int i = location.getRow();
         int j = location.getColumn();
-        int k = 2;
         // have to check color and check up and down and right and down in whiles to be ok
         // column up
-        while((j+k) <= 7){
+        if((j+2) <= 7){
             try{
                 if(ChessGame.board.places[i + 1][j].getPiece() == null ){
                     answer.add(ChessGame.board.places[i + 1][j]);
@@ -38,11 +37,9 @@ public class Knight extends Piece{
                 e.printStackTrace();
             }
             
-            k+=2;
         }
-        k = 2;
         // column down
-        while((j-=2) >= 0){
+        if((j-=2) >= 0){
             try{
                 if(ChessGame.board.places[i + 1][j].getPiece() == null){
                     answer.add(ChessGame.board.places[i + 1][j]);
@@ -55,9 +52,8 @@ public class Knight extends Piece{
                 e.printStackTrace();
             }
         }
-        k = 2;
         // row right
-        while((i+=2) <= 7){
+        if((i+=2) <= 7){
             try{
                 if(ChessGame.board.places[i][j + 1].getPiece() == null){
                     answer.add(ChessGame.board.places[i][j + 1]);
@@ -70,9 +66,8 @@ public class Knight extends Piece{
                 e.printStackTrace();
             }
         }
-        k = 2;
         // row left
-        while((i-=2) >= 0){
+        if((i-=2) >= 0){
             try{
                 if(ChessGame.board.places[i][j + 1].getPiece() == null){
                     answer.add(ChessGame.board.places[i][j + 1]);
@@ -98,10 +93,9 @@ public class Knight extends Piece{
         ArrayList<Place> answer = new ArrayList<Place>();
         int i = location.getRow();
         int j = location.getColumn();
-        int k = 2;
         // have to check color and check up and down and right and down in whiles to be ok
         // column up
-        while((j+k) <= 7){
+        if((j+2) <= 7){
             try{
                 if(ChessGame.board.places[i + 1][j].getPiece().getColor() != this.color){
                     answer.add(ChessGame.board.places[i + 1][j]);
@@ -114,11 +108,9 @@ public class Knight extends Piece{
                 e.printStackTrace();
             }
             
-            k+=2;
         }
-        k = 2;
         // column down
-        while((j-=2) >= 0){
+        if((j-=2) >= 0){
             try{
                 if(ChessGame.board.places[i + 1][j].getPiece().getColor() != this.color){
                     answer.add(ChessGame.board.places[i + 1][j]);
@@ -131,9 +123,8 @@ public class Knight extends Piece{
                 e.printStackTrace();
             }
         }
-        k = 2;
         // row right
-        while((i+=2) <= 7){
+        if((i+=2) <= 7){
             try{
                 if(ChessGame.board.places[i][j + 1].getPiece().getColor() != this.color){
                     answer.add(ChessGame.board.places[i][j + 1]);
@@ -146,9 +137,8 @@ public class Knight extends Piece{
                 e.printStackTrace();
             }
         }
-        k = 2;
         // row left
-        while((i-=2) >= 0){
+        if((i-=2) >= 0){
             try{
                 if(ChessGame.board.places[i][j + 1].getPiece().getColor() != this.color){
                     answer.add(ChessGame.board.places[i][j + 1]);
