@@ -24,7 +24,7 @@ public class Knight extends Piece{
         int j = location.getColumn();
         // have to check color and check up and down and right and down in whiles to be ok
         // column up
-        if((j+2) <= 7){
+        if((j+=2) <= 7){
             try{
                 if(ChessGame.board.places[i + 1][j].getPiece() == null ){
                     answer.add(ChessGame.board.places[i + 1][j]);
@@ -95,7 +95,7 @@ public class Knight extends Piece{
         int j = location.getColumn();
         // have to check color and check up and down and right and down in whiles to be ok
         // column up
-        if((j+2) <= 7){
+        if((j+=2) <= 7){
             try{
                 if(ChessGame.board.places[i + 1][j].getPiece().getColor() != this.color){
                     answer.add(ChessGame.board.places[i + 1][j]);
